@@ -65,7 +65,7 @@ firebase.auth().onAuthStateChanged(async function(user) {
 // {
 //   id: 'abcdefg',
 //   username: 'brian',
-//   imageURL: 'https://images.unsplash.com/...',
+//   imageUrl: 'https://images.unsplash.com/...',
 //   likes: 12,
 //   comments: [
 //     { username: 'brian', text: 'i love tacos!' },
@@ -79,11 +79,11 @@ async function renderPost(post) {
       <div class="md:mx-0 mx-4">
         <span class="font-bold text-xl">${post.username}</span>
       </div>
-  
+
       <div>
         <img src="${post.imageUrl}" class="w-full">
       </div>
-  
+
       <div class="text-3xl md:mx-0 mx-4">
         <button class="like-button">❤️</button>
         <span class="likes">${post.likes}</span>
@@ -92,7 +92,7 @@ async function renderPost(post) {
       <div class="comments text-sm md:mx-0 mx-4 space-y-2">
         ${renderComments(post.comments)}
       </div>
-  
+
       <div class="w-full md:mx-0 mx-4">
         ${renderCommentForm()}
       </div>
